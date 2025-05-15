@@ -1,6 +1,6 @@
 package com.ycosilvallana.repository
 
-import com.ycosilvallana.models.BaseResponse
+import com.ycosilvallana.models.BasePageResponse
 import com.ycosilvallana.models.Character
 
 interface CharacterRepository {
@@ -13,6 +13,6 @@ interface CharacterRepository {
     val page4: List<Character>
     val page5: List<Character>
 
-    suspend fun getAllHeroes(page: Int = 1): BaseResponse<List<Character>>
-    suspend fun searchHeroes(name: String): BaseResponse<List<Character>>
+    suspend fun getAllCharacters(page: Int = 1): BasePageResponse<List<Character>>
+    suspend fun searchCharacter(name: String): BasePageResponse<List<Character>>
 }
